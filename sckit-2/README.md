@@ -4,9 +4,9 @@
 
 Tải dữ liệu ↓↓↓
 
-```java
+```python
 Github > Pandas > iris.csv
-[URL]https://github.com/pydata/pandas/blod/máter/pandas/tests/data/iris.csv
+[URL]https://github.com/pydata/pandas/blod/master/pandas/tests/data/iris.csv
 ```
 
 ## Giải thích chương trình
