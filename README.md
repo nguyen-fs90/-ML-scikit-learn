@@ -1,3 +1,5 @@
 # Thực hành Machine Learning (Scikit-Learn)
 
-## Training một chương trình tính toán XOR
+## Training: tính toán XOR
+
+## Training: phân loại hạt giống hoa iris
