@@ -1,6 +1,6 @@
 # Phân loại hạt giống hoa iris
 
-## Thu thập dữ liệu
+## Nguồn dữ liệu
 
 Tải dữ liệu ↓↓↓
 
@@ -8,5 +8,3 @@ Tải dữ liệu ↓↓↓
 Github > Pandas > iris.csv
 [URL]https://github.com/pydata/pandas/blod/master/pandas/tests/data/iris.csv
 ```
-
-## Giải thích chương trình
