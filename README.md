@@ -3,3 +3,5 @@
 ## Training: tính toán XOR
 
 ## Training: phân loại hạt giống hoa iris
+
+## Traning: Nhận diện chữ trong hình ảnh
