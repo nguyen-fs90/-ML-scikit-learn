@@ -1,15 +1,15 @@
 from sklearn import svm
 
-# 
+# Tập dữ liệu
 xor_data = [
-    # 
+    # P, Q, Result
     [0, 0, 0],
     [0, 1, 1],
     [1, 0, 1],
     [1, 1, 0]
 ]
 
-#
+# Phân loại data & label
 data = []
 label = []
 for row in xor_data:
@@ -19,18 +19,18 @@ for row in xor_data:
     data.append([p, q])
     label.append(r)
 
-# 
+# Training 
 clf = svm.SVC()
 clf.fit(data, label)
 
-#
-pre = clf.predict(data)
-print("result :", pre)
+# Dự đoán
+predict = clf.predict(data)
+print("result :", predict)
 
-#
+# Report
 ok = 0; total = 0
 for idx, answer in enumerate(label):
-    p = pre[idx]
+    p = predict[idx]
     if p == answer: ok += 1
     total += 1
-print("rate :", ok, "/", total, "=", ok/total)
+print("Correct Rate :", ok, "/", total, "=", ok/total)

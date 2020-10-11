@@ -1,7 +1,7 @@
-# Thực hành Machine Learning (Scikit-Learn)
+## Thực hành Machine Learning (Scikit-Learn)
 
-## Training: tính toán XOR
+### [Training: tính toán XOR](./scikit-1)
 
-## Training: phân loại hạt giống hoa iris
+### [Training: phân loại hạt giống hoa iris](./scikit-2)
 
-## Traning: Nhận diện chữ trong hình ảnh
+### [Traning: Nhận diện chữ trong hình ảnh](./scikit-3)

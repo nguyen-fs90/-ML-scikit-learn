@@ -1,6 +1,6 @@
 from sklearn import svm, metrics
 
-# 
+# Load data từ file csv
 def load_csv(fname):
     labels = []
     images = []
@@ -15,16 +15,16 @@ def load_csv(fname):
 data = load_csv("./mnist/train.csv")
 test = load_csv("./mnist/t10k.csv")
 
-# training
+# Training
 clf = svm.SVC()
 clf.fit(data["images"], data["labels"])
 
-#
+# Dự đoán
 predict = clf.predict(test["images"])
 
-#
+# Rate & Report
 ac_core = metrics.accuracy_score(test["labels"], predict)
 cl_report = metrics.classification_report(test["labels"], predict)
-print("rate =", ac_core)
-print("report =")
+print("Correct Rate =", ac_core)
+print("Report =")
 print(cl_report)

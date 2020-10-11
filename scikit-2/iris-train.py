@@ -2,7 +2,7 @@ from contextlib import closing
 from sklearn import svm, metrics
 import random, re
 
-#
+# Lấy dữ liệu từ file csv
 csv = []
 with open('iris.csv', 'r', encoding='utf-8') as fp:
     #
@@ -13,13 +13,13 @@ with open('iris.csv', 'r', encoding='utf-8') as fp:
         fn = lambda n : float(n) if re.match(r'^[0-9]\.]+$', n) else n
         cols = list(map(fn, cols))
         csv.append(cols)
-#
+# Xóa phần tử 0
 del csv[0]
 
-#
+# trộn
 random.shuffle(csv)
 
-#
+# Xắp xếp lại dữ liệu
 total_len = len(csv)
 train_len = int(total_len * 2 / 3)
 train_data = []
@@ -35,13 +35,13 @@ for i in range(total_len):
     else:
         test_data.append(data)
         test_label.append(label)
-#
+# Training
 clf = svm.SVC()
 clf.fit(train_data, train_label)
 pre = clf.predict(test_data)
 
-#
+# Score
 ac_score = metrics.accuracy_score(test_label, pre)
-print("rate =", ac_score)
+print("Correct Rate =", ac_score)
 
 

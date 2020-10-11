@@ -1,16 +1,16 @@
 import struct
 
 def to_csv(name, maxdata):
-    # open label file, image file
+    # Open label file, image file
     lbl_f = open("./mnist/"+name+"-labels-idx1-ubyte", "rb")
     img_f = open("./mnist/"+name+"-images-idx3-ubyte", "rb")
     csv_f = open("./mnist/"+name+".csv", "w", encoding="utf-8")
-    # đọc thông tin header
+    # Đọc thông tin header
     mag, lbl_count = struct.unpack(">II", lbl_f.read(8))
     mag, img_count = struct.unpack(">II", img_f.read(8))
     rows, cols = struct.unpack(">II", img_f.read(8))
     pixels = rows * cols
-    # đọc dữ liệu ảnh và lưu vào file CSV
+    # Đọc dữ liệu ảnh và lưu vào file CSV
     res = []
     for idx in range(lbl_count):
         if idx > maxdata: break
@@ -29,6 +29,7 @@ def to_csv(name, maxdata):
     csv_f.close()
     lbl_f.close()
     img_f.close()
+
 # chỉ định số lượng xuất file
 to_csv("train", 1000)
 to_csv("t10k", 500)

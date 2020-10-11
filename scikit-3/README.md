@@ -1,6 +1,6 @@
-# Nhận diện chữ trong hình ảnh
+## Nhận diện chữ trong hình ảnh
 
-## Nguồn dữ liệu
+### Nguồn dữ liệu
 
 ```python
 THE MNIST DATABASE of handwritten digits
